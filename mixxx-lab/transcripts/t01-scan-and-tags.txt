@@ -1,0 +1,12 @@
+$ sqlite3 mixxxdb.sqlite "SELECT * FROM directories;"
+/home/hatch/workspace/mixxx-labwork/music
+
+-- tracks as scanned in (tags read by Mixxx)
+id  artist            title                  album                genre       duration_s  samplerate  bitrate  tracknumber
+--  ----------------  ---------------------  -------------------  ----------  ----------  ----------  -------  -----------
+1   Harbour Lights    Arpeggio Study No. 1   Quiet Harbour        Ambient     32.03       44100       192      2          
+2   Studio Reference  Concert A (Test Tone)  Test Tones           Reference   20.04       44100       192                 
+3   The Tone Poets    Night Drive Loop       Lab Fixtures Vol. 1  Electronic  30.04       44100       192      2          
+4   The Tone Poets    Pulse Train in C       Lab Fixtures Vol. 1  Electronic  30.04       44100       192      1          
+5   Harbour Lights    Slow Morning Groove    Quiet Harbour        Downtempo   30.04       44100       192      1          
+6   Harbour Lights    Second Cup Waltz       Quiet Harbour        Downtempo   30.04       44100       192      3          

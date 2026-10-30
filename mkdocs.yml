@@ -1,0 +1,30 @@
+site_name: Mixxx for Mere Mortals
+site_description: Free DJ software that plays your music files on virtual decks with a real mixer and a measured library. Installing Mixxx, scanning and analysing a collection, what its BPM and key numbers are worth, Auto DJ, broadcasting and controllers, with the limits stated plainly.
+site_url: https://paulsullivan33-dev.github.io/mixxx-for-mere-mortals/
+copyright: 'Part of <a href="https://paulsullivan33-dev.github.io/mere-mortals/">For Mere Mortals</a> · Text <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, code MIT'
+
+# Guides live at the repo root (nice for GitHub browsing).
+# The deploy workflow copies them into docs/ before building.
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - What Mixxx Is: what-mixxx-is.md
+  - The Moving Parts: the-moving-parts.md
+  - Installing Mixxx: installing-mixxx.md
+  - Your First Library: your-first-library.md
+  - The Library: the-library.md
+  - Analysis — BPM and Key: analysis-bpm-and-key.md
+  - Decks and the Mixer: decks-and-the-mixer.md
+  - Sync and Beatmatching: sync-and-beatmatching.md
+  - Hotcues, Loops and Effects: hotcues-loops-and-effects.md
+  - Auto DJ: autodj.md
+  - Broadcasting and Recording: broadcasting-and-recording.md
+  - Controllers and Vinyl Control: controllers-and-vinyl.md
+  - Recipes: recipes.md
+  - The Neighbours: the-neighbours.md
+  - Limits: limits.md
+  - Troubleshooting: troubleshooting.md
+  - Glossary: glossary.md
+  - Writing Criteria: criteria.md

@@ -1,0 +1,2 @@
+warning [Main] Output sound device clock reference not set! Using "Network stream"
+warning [0x5dd4f85eed90] SoundDeviceNetworkThread: Failed bumping priority

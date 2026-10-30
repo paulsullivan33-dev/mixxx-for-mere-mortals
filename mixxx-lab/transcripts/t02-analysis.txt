@@ -1,0 +1,33 @@
+-- after Analyze: BPM, key, replay gain, beat grid provenance
+id  title                  bpm    key  key_id  replaygain  beats_version  beats_sub_version                             keys_version
+--  ---------------------  -----  ---  ------  ----------  -------------  --------------------------------------------  ------------
+1   Arpeggio Study No. 1   110.0  C    1       0.46        BeatGrid-2.0   rounding=V4|vamp_plugin_id=qm-tempotracker:0  KeyMap-1.0  
+2   Concert A (Test Tone)  86.25  Am   22      1.12        BeatGrid-2.0   rounding=V4|vamp_plugin_id=qm-tempotracker:0  KeyMap-1.0  
+3   Night Drive Loop       128.0  Cm   13      1.11        BeatGrid-2.0   rounding=V4|vamp_plugin_id=qm-tempotracker:0  KeyMap-1.0  
+4   Pulse Train in C       120.0  Cm   13      1.05        BeatGrid-2.0   rounding=V4|vamp_plugin_id=qm-tempotracker:0  KeyMap-1.0  
+5   Slow Morning Groove    100.0  Cm   13      1.05        BeatGrid-2.0   rounding=V4|vamp_plugin_id=qm-tempotracker:0  KeyMap-1.0  
+6   Second Cup Waltz       90.0   Cm   13      1.14        BeatGrid-2.0   rounding=V4|vamp_plugin_id=qm-tempotracker:0  KeyMap-1.0  
+
+-- ground truth (from ffmpeg synthesis)
+Arpeggio Study No. 1 : arpeggio stepping at 110 BPM, notes C-E-G-C (C major)
+Concert A (Test Tone) : pure 440 Hz sine, no beat at all
+Night Drive Loop      : pulse train at 128 BPM, file also carries a TBPM=128 tag
+Pulse Train in C      : pulse train at 120 BPM, no BPM tag
+Slow Morning Groove   : pulse train at 100 BPM, no BPM tag
+Second Cup Waltz      : pulse train at 90 BPM (added later, caught by rescan, not analysed)
+
+-- track_analysis rows (waveform passes)
+track_id  type  description          version            
+--------  ----  -------------------  -------------------
+1         1     Waveform 5.0         Waveform-5.0       
+1         2     WaveformSummary 5.0  WaveformSummary-5.0
+2         1     Waveform 5.0         Waveform-5.0       
+2         2     WaveformSummary 5.0  WaveformSummary-5.0
+3         1     Waveform 5.0         Waveform-5.0       
+3         2     WaveformSummary 5.0  WaveformSummary-5.0
+4         1     Waveform 5.0         Waveform-5.0       
+4         2     WaveformSummary 5.0  WaveformSummary-5.0
+5         1     Waveform 5.0         Waveform-5.0       
+5         2     WaveformSummary 5.0  WaveformSummary-5.0
+6         1     Waveform 5.0         Waveform-5.0       
+6         2     WaveformSummary 5.0  WaveformSummary-5.0

@@ -1,0 +1,94 @@
+$ mixxx --version
+ConfigObject: Could not read "/home/hatch/.mixxx/mixxx.cfg"
+qt.qpa.xcb: could not connect to display 
+qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "" even though it was found.
+This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
+
+Available platform plugins are: eglfs, linuxfb, minimal, minimalegl, offscreen, vnc, wayland-egl, wayland, wayland-xcomposite-egl, wayland-xcomposite-glx, xcb.
+
+
+$ dpkg -l mixxx mixxx-data | grep ^ii
+ii  mixxx          2.4.0+dfsg-2build4 amd64        Digital Disc Jockey Interface
+ii  mixxx-data     2.4.0+dfsg-2build4 all          Digital Disc Jockey Interface -- data files
+$ QT_QPA_PLATFORM=offscreen mixxx --version
+ConfigObject: Could not read "/home/hatch/.mixxx/mixxx.cfg"
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
+Loading resources from  "/usr/share/mixxx/"
+ConfigObject: Could not read "/home/hatch/.mixxx/mixxx.cfg"
+ConfigObject: Could not read "/home/hatch/.mixxx/mixxx.cfg"
+No version number in configuration file. Setting to "2.4.0"
+BroadcastSettings - Profiles folder doesn't exist. Creating it.
+BroadcastSettings - No profiles found. Creating default profile.
+
+Mixxx 2.4.0
+
+$ QT_QPA_PLATFORM=offscreen mixxx --help
+ConfigObject: Could not read "/home/hatch/.mixxx/mixxx.cfg"
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
+Loading resources from  "/usr/share/mixxx/"
+ConfigObject: Could not read "/home/hatch/.mixxx/mixxx.cfg"
+ConfigObject: Could not read "/home/hatch/.mixxx/mixxx.cfg"
+No version number in configuration file. Setting to "2.4.0"
+BroadcastSettings - Found 1 profile(s)
+
+Usage: mixxx [options] file
+Mixxx is an open source DJ software. For more information, see: https://manual.mixxx.org/2.4/chapters/appendix/commandline_dev_tools.html
+
+Options:
+  -f, --full-screen              Starts Mixxx in full-screen mode
+  --locale <locale>              Use a custom locale for loading translations.
+                                 (e.g 'fr')
+  --settings-path <path>         Top-level directory where Mixxx should look
+                                 for settings. Default is: /home/hatch/.mixxx/
+  --resource-path <path>         Top-level directory where Mixxx should look
+                                 for its resource files such as MIDI mappings,
+                                 overriding the default installation location.
+  --timeline-path <path>         Path the debug statistics time line is written
+                                 to
+  --enable-legacy-vumeter        Use legacy vu meter
+  --enable-legacy-spinny         Use legacy spinny
+  --controller-debug             Causes Mixxx to display/log all of the
+                                 controller data it receives and script
+                                 functions it loads
+  --controller-abort-on-warning  The controller mapping will issue more
+                                 aggressive warnings and errors when detecting
+                                 misuse of controller APIs. New Controller
+                                 Mappings should be developed with this option
+                                 enabled!
+  --developer                    Enables developer-mode. Includes extra log
+                                 info, stats on performance, and a Developer
+                                 tools menu.
+  --safe-mode                    Enables safe-mode. Disables OpenGL waveforms,
+                                 and spinning vinyl widgets. Try this option if
+                                 Mixxx is crashing on startup.
+  --color <color>                [auto|always|never] Use colors on the console
+                                 output.
+  --log-level <level>            Sets the verbosity of command line logging.
+                                 critical - Critical/Fatal only
+                                 warning  - Above + Warnings
+                                 info     - Above + Informational messages
+                                 debug    - Above + Debug/Developer messages
+                                 trace    - Above + Profiling messages
+  --log-flush-level <level>      Sets the the logging level at which the log
+                                 buffer is flushed to mixxx.log. <level> is one
+                                 of the values defined at --log-level above.
+  --debug-assert-break           Breaks (SIGINT) Mixxx, if a DEBUG_ASSERT
+                                 evaluates to false. Under a debugger you can
+                                 continue afterwards.
+  -h, --help                     Displays help on commandline options.
+  --help-all                     Displays help including Qt specific options.
+  -v, --version                  Displays version information.
+
+Arguments:
+  file                           Load the specified music file(s) at start-up.
+                                 Each file you specify will be loaded into the
+                                 next virtual deck.
+$ grep -E "Version|Sound" mixxx.cfg (written on clean exit)
+[Auto DJ]
+[Auxiliary1]
+[Auxiliary2]
+[Auxiliary3]
+[Auxiliary4]
+[Channel1]
+[Channel2]
+[Channel3]
